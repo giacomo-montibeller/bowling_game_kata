@@ -17,5 +17,9 @@ defmodule BowlingGameTest do
     test "for a spare frame will return the sum of the rolls plus the next roll" do
       assert BowlingGame.score([[8, 2], [3, 0]]) == 16
     end
+
+    test "for a strike frame will return the sum of the rolls plus the next two rolls" do
+      assert BowlingGame.score([[10, 0], [3, 3]]) == 22
+    end
   end
 end
